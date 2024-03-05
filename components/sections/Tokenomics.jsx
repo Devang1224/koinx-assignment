@@ -1,7 +1,7 @@
 import React from "react";
 import PieChart from "../ui/PieChart";
 
-const Tokenonics = () => {
+const Tokenomics = () => {
   return (
     <div className="container mt-5">
       <p className="text-[24px] font-semibold">Tokenomics</p>
@@ -37,6 +37,6 @@ const Tokenonics = () => {
   );
 };
 
-export default Tokenonics;
+export default Tokenomics;
 
-//transpilePackages: ['@mui/x-charts']
+
