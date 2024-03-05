@@ -3,6 +3,7 @@ import React from "react";
 import Sentiment from "./Sentiment";
 import About from "./About";
 import Tokenomics from "./Tokenomics";
+import Team from "./Team";
 
 const Details = () => {
   return (
@@ -23,6 +24,7 @@ const Details = () => {
       <Sentiment/>
       <About/>
       <Tokenomics/>
+      <Team/>
 
     </div>
   );
