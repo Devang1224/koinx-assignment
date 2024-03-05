@@ -1,11 +1,11 @@
 import Performance from "@/components/sections/Performance";
-import React from 'react'
+import React from "react";
+import Sentiment from "./Sentiment";
 
 const Details = () => {
   return (
     <div>
-
-      <div className="py-6">
+      <div className="py-6 overflow-x-auto">
         <div className="flex items-center gap-10   borderBottom font-semibold h-[50px]">
           <p className="navDetails">Overview</p>
           <p className="navDetails">Fundamentals</p>
@@ -17,9 +17,11 @@ const Details = () => {
         </div>
       </div>
 
-      <Performance/>
-   </div>
-  ) 
-}
+      <Performance />
+      <Sentiment/>
+      
+    </div>
+  );
+};
 
-export default Details
+export default Details;
