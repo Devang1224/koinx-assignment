@@ -1,6 +1,8 @@
 import Performance from "@/components/sections/Performance";
 import React from "react";
 import Sentiment from "./Sentiment";
+import About from "./About";
+import Tokenonics from "./Tokenonics";
 
 const Details = () => {
   return (
@@ -19,7 +21,9 @@ const Details = () => {
 
       <Performance />
       <Sentiment/>
-      
+      <About/>
+      <Tokenonics/>
+
     </div>
   );
 };
