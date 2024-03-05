@@ -59,13 +59,15 @@ const Fundamentals = () => {
             </div>
           </div>
           <div className="flex flex-grow justify-between py-4 items-center borderBottom h-[50px]">
-            <p className="font-medium text-[#00000086]">All-Time High</p>
+            <p className="font-medium text-[#00000086]">All-Time Low</p>
             <div className="text-end">
               <div className="flex gap-4 justify-end">
-                <p className="text-[14px] font-medium">$69,044.77</p>
-                <p className="text-[14px] font-medium  text-red-500">-75.6%</p>
+                <p className="text-[14px] font-medium">$67.81</p>
+                <p className="text-[14px] font-medium  text-green-500">
+                  24729.1%
+                </p>
               </div>
-              <p className="text-[12px]">Nov 10, 2021 (about 1 year)</p>
+              <p className="text-[12px]">Jul 06, 2013 (over 9 year)</p>
             </div>
           </div>
         </div>
