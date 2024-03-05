@@ -7,6 +7,9 @@
   margin:0;
   box-sizing: border-box;
 }
+
+
+
 body{
   background-color:#EFF2F5;
 }
@@ -25,9 +28,18 @@ body{
    @apply h-[50px] hover:text-[#427dea] py-3  border border-x-0 border-t-0 border-b-0  hover:border-b-2 border-b-[#427dea];
   }
 
-  .container{
-    @apply p-[20px] bg-white rounded-md;
+  .section-container{
+    @apply p-[10px] bg-white rounded-md sm:p-[20px];
   }
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 }
 
 

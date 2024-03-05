@@ -8,8 +8,8 @@ const RightAdv = () => {
     <div
       className=" pt-[40px] pb-[40px] bg-[#EDF2FF]
                            sm-2:pt-[68px] sm-2:pb-[62px]
-                           lg-2:p-[0]
-                           lg-2:p-[0]  lg-2:max-w-[426px] 
+                           lg-2:p-[0]  lg-2:max-w-[426px]
+                           
               "
     >
       <div className="rounded-[16px] bg-[#0052FE] px-[10px] pb-[33px] pt-[24px] flex flex-col items-center lg-2:hidden">

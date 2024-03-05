@@ -8,8 +8,8 @@ import Team from "./Team";
 const Details = () => {
   return (
     <div>
-      <div className="py-6 overflow-x-auto">
-        <div className="flex items-center gap-10   borderBottom font-semibold h-[50px]">
+      <div className="py-6 overflow-x-auto no-srollbar">
+        <div className="flex items-center gap-10 text-nowrap borderBottom font-medium h-[50px]">
           <p className="navDetails">Overview</p>
           <p className="navDetails">Fundamentals</p>
           <p className="navDetails">News Insights</p>
@@ -21,11 +21,10 @@ const Details = () => {
       </div>
 
       <Performance />
-      <Sentiment/>
-      <About/>
-      <Tokenomics/>
-      <Team/>
-
+      <Sentiment />
+      <About />
+      <Tokenomics />
+      <Team />
     </div>
   );
 };

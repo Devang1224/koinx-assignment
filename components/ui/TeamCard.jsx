@@ -3,7 +3,7 @@ import React from "react";
 
 const TeamCard = ({ item }) => {
   return (
-    <div className="flex flex-col lg:flex-row items-center py-2 px-4 bg-[#69b8f94c] rounded-lg gap-6">
+    <div className="flex flex-col items-center gap-4 py-2 px-4 bg-[#69b8f94c] rounded-lg md:flex-row md:gap-6">
       <div className="flex flex-col items-center">
         <Image
           src={item.image}

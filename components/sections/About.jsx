@@ -6,7 +6,7 @@ import ArrowRight from "@/assets/Arrow - Right.svg";
 
 const About = () => {
   return (
-    <div className="container mt-5">
+    <div className="section-container mt-5">
       <p className="text-[24px] font-semibold">About Bitcoin</p>
 
       <div>
@@ -21,7 +21,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-2 borderBottom py-4">
+        <div className="flex flex-col gap-2 sm:borderBottom py-4">
           <p className="text-[20px] font-semibold">
             Lorem ipsum dolor sit amet
           </p>
@@ -50,11 +50,11 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-3 borderBottom py-4">
+        <div className="flex flex-col gap-3 sm:borderBottom sm:py-4">
           <p className="text-[20px] font-semibold">Already Holding Bitcoin?</p>
 
-          <div className="flex flex-col lg:flex-row gap-8">
-            <div className="flex flex-1 gap-6 p-3 bg-gradient-primary rounded-lg">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-1 gap-3 p-2 bg-gradient-primary rounded-lg sm-2:p-3 sm-2:gap-6">
               <Image
                 src={tradingImage1}
                 alt="trading image"
@@ -62,17 +62,20 @@ const About = () => {
               />
 
               <div className="flex flex-col py-1 justify-between items-start ">
-                <p className="text-white font-semibold text-[20px] w-[70%] leading-7">
+                <p className="text-white font-semibold text-[18px] leading-7  sm-2:w-[70%] ">
                   Calculate your Profits?
                 </p>
-                <button className="flex py-1 px-4 bg-white rounded-lg items-center gap-2">
-                  <p className="text-[14px] font-medium"> Check Now </p>
+                <button className="flex py-1 px-2 bg-white rounded-lg items-center gap-2 sm:px-4">
+                  <p className="text-[14px] font-medium text-nowrap">
+                    {" "}
+                    Check Now{" "}
+                  </p>
                   <Image src={ArrowRight} width={14} />
                 </button>
               </div>
             </div>
 
-            <div className="flex flex-1 gap-6 p-3 bg-gradient-secondry rounded-lg">
+            <div className="flex flex-1 gap-3 p-2 bg-gradient-secondry rounded-lg sm-2:p-3 sm-2:gap-6">
               <Image
                 src={tradingImage1}
                 alt="trading image"
@@ -80,11 +83,14 @@ const About = () => {
               />
 
               <div className="flex flex-col py-1 justify-between items-start ">
-                <p className="text-white font-semibold text-[20px] w-[80%] leading-7">
+                <p className="text-white font-semibold text-[18px]  leading-7 sm-2:w-[80%] ">
                   Calculate your tax liability
                 </p>
-                <button className="flex py-1 px-4 bg-white rounded-lg items-center gap-2">
-                  <p className="text-[14px] font-medium"> Check Now </p>
+                <button className="flex py-1 px-2 bg-white rounded-lg items-center gap-2 sm:px-4">
+                  <p className="text-[14px] font-medium text-nowrap">
+                    {" "}
+                    Check Now{" "}
+                  </p>
                   <Image src={ArrowRight} width={14} />
                 </button>
               </div>
@@ -92,7 +98,7 @@ const About = () => {
           </div>
         </div>
 
-        <p className="py-2">
+        <p className="py-2 hidden sm:block">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
           esse culpa officiis facilis ducimus illum quas. Dignissimos tempora
           enim nisi, unde exercitationem explicabo aspernatur libero perferendis

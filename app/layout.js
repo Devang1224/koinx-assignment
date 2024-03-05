@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/ui/Header"
+import Header from "@/components/ui/Header";
 import RightAdv from "@/components/ui/RightAdv";
 import CurrencyDataProvider from "@/context/CurrencyDataProvider";
 
@@ -15,19 +15,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header/>
-        <div className="p-4 ml-[11px] md:ml-[40px] ">
-           Cryptocurrencies{'>>'}Bitcoin
-         </div>
-        <div className="flex flex-col px-[16px] lg-2:flex-row lg-2:px-[57px] lg:gap-[20px] ">
-        <div className="flex-grow">
-          <CurrencyDataProvider>
-           {children}
-          </CurrencyDataProvider>
-         </div>
-        <RightAdv/>
+        <Header />
+        <div className=" p-4 ml-[4px] lg-2:ml-[40px] ">
+          Cryptocurrencies{">>"}Bitcoin
         </div>
-        </body>
+        <div className="flex flex-col px-[16px] lg-2:flex-row lg-2:px-[57px] lg:gap-[20px] ">
+          <div className="flex-1 flex-shrink-0">
+            <CurrencyDataProvider>{children}</CurrencyDataProvider>
+          </div>
+          <RightAdv />
+        </div>
+      </body>
     </html>
   );
 }

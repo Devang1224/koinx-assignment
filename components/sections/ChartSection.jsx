@@ -6,7 +6,7 @@ import PriceChart from "@/components/ui/PriceChart";
 
 const ChartSection = () => {
   return (
-    <div className="container">
+    <div className="section-container">
       <div className="flex items-center gap-2">
         <div className="w-[40px]">
           <Image
@@ -41,7 +41,7 @@ const ChartSection = () => {
       </div>
 
       <div>
-        <div className="pt-5 pb-5 flex flex-col lg:flex-row justify-between lg:items-center">
+        <div className="pt-5 pb-5 flex flex-col  lg:flex-row justify-between lg:items-center">
           <div className="py-2">
             <p className="font-semibold ">Bitcoin Price Chart (USD)</p>
           </div>
@@ -56,9 +56,7 @@ const ChartSection = () => {
             <button className="daysButton">ALL</button>
           </div>
         </div>
-        <div className="h-[50vh]">
-          <PriceChart />
-        </div>
+        <div className="h-[50vh]">{/* <PriceChart /> */}</div>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import Fundamentals from "./Fundamentals";
 
 const Performance = () => {
   return (
-    <div className="container flex flex-col gap-10">
+    <div className="section-container flex flex-col gap-10">
       <div className="flex flex-col gap-8">
         <p className="text-[24px] font-semibold">Performance</p>
         <div className="flex items-center justify-between">

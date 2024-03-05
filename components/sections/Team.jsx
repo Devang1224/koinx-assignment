@@ -4,7 +4,7 @@ import TeamCard from "../ui/TeamCard";
 
 const Team = () => {
   return (
-    <div className="container mt-5">
+    <div className="section-container mt-5">
       <p className="text-[24px] font-semibold">Team</p>
 
       <div className="flex flex-col gap-4 pt-4 ">

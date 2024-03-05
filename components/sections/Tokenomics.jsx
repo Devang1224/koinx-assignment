@@ -3,11 +3,11 @@ import PieChart from "../ui/PieChart";
 
 const Tokenomics = () => {
   return (
-    <div className="container mt-5">
+    <div className="section-container mt-5">
       <p className="text-[24px] font-semibold">Tokenomics</p>
       <div className="mt-5">
         <p className="text-[20px] font-medium">Initial Distribution</p>
-        <div className="py-2 flex items-center gap-6">
+        <div className="py-2 flex flex-col items-center gap-6 sm:flex-row">
           <div className="py-2">
             <PieChart />
           </div>
@@ -38,5 +38,3 @@ const Tokenomics = () => {
 };
 
 export default Tokenomics;
-
-
