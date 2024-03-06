@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/ui/Header";
 import RightAdv from "@/components/ui/RightAdv";
 import CurrencyDataProvider from "@/context/CurrencyDataProvider";
+import TrendingCoins from "@/components/ui/TrendingCoins";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,14 +17,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <div className=" p-4 ml-[4px] lg-2:ml-[40px] text-[14px] sm:text-[16px] ">
+        <div className=" p-4 ml-[4px] xl:ml-[40px] text-[14px] sm:text-[16px] ">
           Cryptocurrencies{" >> "}Bitcoin
         </div>
-        <div className="flex flex-col px-[16px] lg-2:flex-row lg-2:px-[57px] lg:gap-[20px] ">
+        <div className="flex flex-col px-[16px] xl:flex-row xl:px-[57px] lg:gap-[20px] ">
           <div className="flex-1 flex-shrink-0">
             <CurrencyDataProvider>{children}</CurrencyDataProvider>
           </div>
-          <RightAdv />
+          <div>
+            <RightAdv />
+            <TrendingCoins/>
+          </div>
         </div>
       </body>
     </html>

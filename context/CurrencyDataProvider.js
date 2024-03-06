@@ -1,6 +1,6 @@
 'use client';
 
-import getCurrentPrice from '@/helpers/getCurrentPrice';
+import getCurrentData from '@/helpers/getCurrentData';
 import { usePathname } from 'next/navigation';
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
@@ -9,21 +9,36 @@ const currencyData = createContext(null);
 
 const CurrencyDataProvider = ({children}) => {
 
-const [coinPrice,setCoinPrice] = useState(null);
+const [coinData,setCoinData] = useState({
+   name:"",
+   symbol:"",
+   image:"",
+   rank:"",
+   price:"",
+   changePerc:0
+});
+const [currencyCode,setCurrencyCode] = useState("usd")
 const pathName = usePathname().split('/')[1];
 
 
 
-useEffect( ()=>{
+useEffect(()=>{
 
-               // const price = getCurrentPrice(pathName);
-               console.log("price");
+    async function fetchData(){
+        
+         const data = await getCurrentData(pathName,currencyCode.toLowerCase());
+           setCoinData(data);
+
+   }
+
+fetchData();   
+               
 
 },[])
 
 
   return (
-     <currencyData.Provider value={coinPrice}>
+     <currencyData.Provider value={{coinData,currencyCode}}>
         {children}
      </currencyData.Provider>
   )

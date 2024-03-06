@@ -4,15 +4,15 @@ import ArrowRight from "@/assets/Arrow - Right.svg";
 
 const RightAdv = () => {
   return (
-    //  for mobile
     <div
       className=" pt-[40px] pb-[40px] bg-[#EDF2FF]
                            sm-2:pt-[68px] sm-2:pb-[62px]
-                           lg-2:p-[0]  lg-2:max-w-[426px]
+                            xl:p-[0]  xl:max-w-[426px] 
                            
               "
     >
-      <div className="rounded-[16px] bg-[#0052FE] px-[10px] pb-[33px] pt-[24px] flex flex-col items-center lg-2:hidden">
+      {/*  for mobile */}
+      <div className="rounded-[16px] bg-[#0052FE] px-[10px] pb-[33px] pt-[24px] flex flex-col items-center xl:hidden">
         <Image
           src={Frame}
           alt="Vector Image"
@@ -44,13 +44,13 @@ const RightAdv = () => {
 
       {/*  for web */}
       <div
-        className="hidden py-[25px] px-[6px] rounded-[8px] bg-[#0052FE] lg-2:flex
+        className="hidden py-[20px] px-[6px] rounded-[8px] bg-[#0052FE] xl:flex
                               xl:pb-[55px] xl:pt-[30px] xl:px-[16px]
               "
       >
         <div className="flex flex-col gap-[35px]">
           <div className="w-full flex flex-col gap-[14px]">
-            <p className="px-[10px] text-[18px] font-bold text-white text-center leading-normal xl:px-[63px] xl:text-[24px] xl:leading-[40px]">
+            <p className="px-[10px] text-[18px] font-bold text-white text-center leading-normal xl:px-[58px] xl:text-[24px] xl:leading-[40px]">
               Get Started with KoinX for FREE
             </p>
             <p className="px-[33.5px] text-center text-[12px] font-medium text-[#F2F2F2] leading-normal xl:leading-[24px] xl:text-[14px]">
