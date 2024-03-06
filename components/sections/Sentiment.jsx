@@ -17,7 +17,7 @@ const Sentiment = () => {
           </div>
         </div>
 
-        <KeyEventsCarousel />
+        {/* <KeyEventsCarousel /> */}
 
         <div className="mt-5 flex flex-col gap-4">
           <div className="flex gap-4 items-center">

@@ -97,7 +97,7 @@ const Fundamentals = () => {
                 <p className="font-medium">$67.81</p>
                 <p className="font-medium  text-green-500">24729.1%</p>
               </div>
-              <p className="text-[10px] sm:text-[14px]">
+              <p className="text-[10px] sm:text-[12px]">
                 Jul 06, 2013 (over 9 year)
               </p>
             </div>

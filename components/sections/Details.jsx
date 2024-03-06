@@ -8,8 +8,8 @@ import Team from "./Team";
 const Details = () => {
   return (
     <div>
-      <div className="py-6 overflow-x-auto no-srollbar">
-        <div className="flex items-center gap-10 text-nowrap borderBottom font-medium h-[50px]">
+      <div className="my-6 overflow-x-auto no-srollbar borderBottom">
+        <div className="flex items-center gap-10 text-nowrap font-medium h-[50px]">
           <p className="navDetails">Overview</p>
           <p className="navDetails">Fundamentals</p>
           <p className="navDetails">News Insights</p>
