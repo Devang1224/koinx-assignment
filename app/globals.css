@@ -21,7 +21,7 @@ body{
     @apply border border-t-0 border-x-0;
   }
   .daysButton{
-   @apply hover:bg-[#aacfffc3] hover:text-[#0052cc] text-[#0000008c] text-[10px] px-1 sm:text-[12px] sm:px-2  rounded-lg;
+   @apply hover:bg-[#aacfffc3] hover:text-[#0052cc] text-[#0000008c] text-[8px] px-1 sm:text-[12px] sm:px-2  rounded-lg;
   }
 
   .navDetails{
