@@ -20,15 +20,15 @@ export default function RootLayout({ children }) {
         <div className=" p-4 ml-[4px] xl:ml-[40px] text-[14px] sm:text-[16px] ">
           Cryptocurrencies{" >> "}Bitcoin
         </div>
-        <div className="flex flex-col px-[16px] xl:flex-row xl:px-[57px] lg:gap-[20px] ">
-          <div className="flex-1 flex-shrink-0">
-            <CurrencyDataProvider>{children}</CurrencyDataProvider>
+        <CurrencyDataProvider>
+          <div className="flex flex-col px-[16px] xl:flex-row xl:px-[57px] lg:gap-[20px] ">
+            <div className="flex-1 flex-shrink-0">{children}</div>
+            <div>
+              <RightAdv />
+              <TrendingCoins />
+            </div>
           </div>
-          <div>
-            <RightAdv />
-            <TrendingCoins/>
-          </div>
-        </div>
+        </CurrencyDataProvider>
       </body>
     </html>
   );

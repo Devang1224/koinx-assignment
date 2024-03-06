@@ -4,21 +4,18 @@ import BitcoinLogo from "@/assets/Bitcoin.svg.webp";
 import PriceChart from "@/components/ui/PriceChart";
 import ProfitIndicator from "../ui/ProfitIndicator";
 import { numberWithCommas } from "@/utils/numberWithCommas";
+import { useCurrencyData } from "@/context/CurrencyDataProvider";
 
 const ChartSection = ({ data }) => {
   console.log(data);
+  const { currencyCode } = useCurrencyData();
 
   return (
     <div className="p-[0px] rounded-md sm:p-[20px] bg-[#EFF2F5] sm:bg-white">
       <div className="flex items-center gap-2 bg-[#EFF2F] sm:bg-white pb-4 sm:py-0">
         <div className="w-[30px] sm:w-[40px]">
           {data?.image && (
-            <Image
-              src={data.image}
-              alt="bitcoin logo"
-              width={40}
-              height={40}
-            />
+            <Image src={data.image} alt="bitcoin logo" width={40} height={40} />
           )}
         </div>
         <p className="font-semibold flex items-center gap-2 text-[18px] sm:text-[24px]">
@@ -51,7 +48,7 @@ const ChartSection = ({ data }) => {
           <div className="pt-5 pb-5 flex flex-col  lg:flex-row justify-between lg:items-center">
             <div className="py-2">
               <p className="font-semibold text-[14px] sm:text-[16px]">
-                {`${data.name} Price Chart ($})`}
+                {`${data.name} Price Chart (${currencyCode?.toUpperCase()})`}
               </p>
             </div>
             <div className="flex gap-1 sm:gap-3">

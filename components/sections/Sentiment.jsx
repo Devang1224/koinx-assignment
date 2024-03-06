@@ -16,8 +16,10 @@ const Sentiment = () => {
             <ToolTip />
           </div>
         </div>
-
-        {/* <KeyEventsCarousel /> */}
+       
+        <div className="w-[100%]">
+          <KeyEventsCarousel />
+        </div>
 
         <div className="mt-5 flex flex-col gap-4">
           <div className="flex gap-4 items-center">

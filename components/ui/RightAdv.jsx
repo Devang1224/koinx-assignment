@@ -4,13 +4,8 @@ import ArrowRight from "@/assets/Arrow - Right.svg";
 
 const RightAdv = () => {
   return (
-    <div
-      className=" pt-[40px] pb-[40px] bg-[#EDF2FF]
-                           sm-2:pt-[68px] sm-2:pb-[62px]
-                            xl:p-[0]  xl:max-w-[426px] 
-                           
-              "
-    >
+    <div className=" py-6 bg-[#EDF2FF] xl:p-[0] xl:max-w-[426px] ">
+
       {/*  for mobile */}
       <div className="rounded-[16px] bg-[#0052FE] px-[10px] pb-[33px] pt-[24px] flex flex-col items-center xl:hidden">
         <Image

@@ -1,51 +1,56 @@
-'use client';
+"use client";
 
-import getCurrentData from '@/helpers/getCurrentData';
-import { usePathname } from 'next/navigation';
-import React, { createContext, useContext, useEffect, useState } from 'react'
-
+import getCurrentData from "@/helpers/getCurrentData";
+import fetchAllCoins from "@/helpers/getTrendingCoins";
+import { usePathname } from "next/navigation";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 const currencyData = createContext(null);
 
-const CurrencyDataProvider = ({children}) => {
+const CurrencyDataProvider = ({ children }) => {
+  const [coinData, setCoinData] = useState({
+    name: "",
+    symbol: "",
+    image: "",
+    rank: "",
+    price: "",
+    changePerc: 0,
+  });
+  const [trendingCoinsList, setTrendingCoinsList] = useState([]);
+  const [currencyCode, setCurrencyCode] = useState("usd");
 
-const [coinData,setCoinData] = useState({
-   name:"",
-   symbol:"",
-   image:"",
-   rank:"",
-   price:"",
-   changePerc:0
-});
-const [currencyCode,setCurrencyCode] = useState("usd")
-const pathName = usePathname().split('/')[1];
+  const pathName = usePathname().split("/")[1];
 
+  useEffect(() => {
+    async function fetchData() {
+      try{
+          const data = await getCurrentData(pathName, currencyCode.toLowerCase());
+          setCoinData(data);
 
+          const trendingData = await fetchAllCoins(currencyCode);
+          console.log(trendingData);
+          setTrendingCoinsList(trendingData)
+      }
+      catch(err){
+      console.log(err);
+      }
+    
+      
 
-useEffect(()=>{
+    }
 
-    async function fetchData(){
-        
-         const data = await getCurrentData(pathName,currencyCode.toLowerCase());
-           setCoinData(data);
-
-   }
-
-fetchData();   
-               
-
-},[])
-
+    fetchData();
+  }, [currencyCode]);
 
   return (
-     <currencyData.Provider value={{coinData,currencyCode}}>
-        {children}
-     </currencyData.Provider>
-  )
-}
+    <currencyData.Provider value={{ coinData, currencyCode, trendingCoinsList}}>
+      {children}
+    </currencyData.Provider>
+  );
+};
 
-export default CurrencyDataProvider
+export default CurrencyDataProvider;
 
-export const useCurrencyData = ()=>{
-   return useContext(currencyData);
-}
+export const useCurrencyData = () => {
+  return useContext(currencyData);
+};
