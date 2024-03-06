@@ -5,7 +5,6 @@ import ArrowRight from "@/assets/Arrow - Right.svg";
 const RightAdv = () => {
   return (
     <div className=" py-6 bg-[#EDF2FF] xl:p-[0] xl:max-w-[426px] ">
-
       {/*  for mobile */}
       <div className="rounded-[16px] bg-[#0052FE] px-[10px] pb-[33px] pt-[24px] flex flex-col items-center xl:hidden">
         <Image

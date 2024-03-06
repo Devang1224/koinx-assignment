@@ -4,7 +4,7 @@ import KeyEventsCarousel from "../ui/KeyEventsCarousel";
 
 const Sentiment = () => {
   return (
-    <div className="section-container mt-5">
+    <div className="section-container mt-5 ">
       <div className="">
         <p className="text-[24px] font-semibold">Sentiment</p>
 
@@ -16,10 +16,10 @@ const Sentiment = () => {
             <ToolTip />
           </div>
         </div>
-       
-        <div className="w-[100%]">
+
+
           <KeyEventsCarousel />
-        </div>
+
 
         <div className="mt-5 flex flex-col gap-4">
           <div className="flex gap-4 items-center">

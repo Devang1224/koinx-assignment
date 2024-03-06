@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const CoinsCard = ({ item }) => {
   return (
-    <div className="border p-2 min-w-[200px] max-h-[158px] sm:min-w-[250px] sm:max-h-[158px] sm:p-4 rounded-lg">
+    <div className="border p-2 w-[200px] max-h-[158px] md:min-w-[250px] md:max-h-[158px] md:p-4 rounded-lg">
       <div className="flex items-center">
-        <div className="w-[20px] h-[20px] rounded-full bg-slate-500 overflow-hidden sm:w-[26px] sm:h-[26px]">
+        <div className="w-[20px] h-[20px] rounded-full bg-slate-500 overflow-hidden md:w-[26px] md:h-[26px]">
           <Image
             src={item.image}
             className="w-full h-full object-cover"
@@ -13,15 +13,15 @@ const CoinsCard = ({ item }) => {
             height={100}
           />
         </div>
-        <p className="text-[12px] sm:text-[14px] px-1 font-medium">
+        <p className="text-[12px] md:text-[14px] px-1 font-medium">
           {item.symbol}
         </p>
         {item.changePerc >= 0 ? (
-          <p className="px-1 text-[10px] sm:text-[12px] bg-[#9de7b662] text-[#6fb787] rounded">
+          <p className="px-1 text-[10px] md:text-[12px] bg-[#9de7b662] text-[#6fb787] rounded">
             {`+${item.changePerc}`}
           </p>
         ) : (
-          <p className="px-1 text-[10px] sm:text-[12px] bg-[#ff585862] text-[#e74747] rounded">
+          <p className="px-1 text-[10px] md:text-[12px] bg-[#ff585862] text-[#e74747] rounded">
             -0.52%
           </p>
         )}
