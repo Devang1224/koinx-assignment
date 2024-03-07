@@ -4,6 +4,7 @@ import Header from "@/components/ui/Header";
 import RightAdv from "@/components/ui/RightAdv";
 import CurrencyDataProvider from "@/context/CurrencyDataProvider";
 import TrendingCoins from "@/components/ui/TrendingCoins";
+import BreadCrumbs from "@/components/ui/BreadCrumbs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,13 +14,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <div className=" p-4 ml-[4px] xl:ml-[40px] text-[14px] sm:text-[16px] ">
-          Cryptocurrencies{" >> "}Bitcoin
-        </div>
+        <BreadCrumbs/>
         <CurrencyDataProvider>
           <div className="flex flex-col px-[16px] xl:flex-row xl:px-[57px] lg:gap-[20px] ">
             <div className="xl:max-w-[67%]">{children}</div>

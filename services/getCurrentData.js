@@ -2,6 +2,8 @@ import axios from "axios";
 
 export default async function getCurrentData(coinName,currencyCode){
 
+if(!coinName)return;
+
  try{
       const currencyData = await axios.get(`https://api.coingecko.com/api/v3/coins/${coinName}?localization=false`)
       return {

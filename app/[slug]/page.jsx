@@ -7,18 +7,17 @@ import ChartSection from "@/components/sections/ChartSection";
 import Details from "@/components/sections/Details";
 import { useParams } from "next/navigation";
 import AllCoins from "@/components/sections/AllCoins";
+import BreadCrumbs from "@/components/ui/BreadCrumbs";
 
 const page = () => {
   const { coinData } = useCurrencyData();
-  const params = useParams();
-  console.log(params.slug);
+
 
   return (
     <div className="">
       <ChartSection data={coinData} />
       <Details />
-      <AllCoins/>
-      
+      <AllCoins />
     </div>
   );
 };

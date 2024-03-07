@@ -7,7 +7,7 @@ import { numberWithCommas } from "@/utils/numberWithCommas";
 import { useCurrencyData } from "@/context/CurrencyDataProvider";
 
 const ChartSection = ({ data }) => {
-  console.log(data);
+
   const { currencyCode } = useCurrencyData();
 
   return (

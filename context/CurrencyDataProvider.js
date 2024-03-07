@@ -1,7 +1,7 @@
 "use client";
 
-import getCurrentData from "@/helpers/getCurrentData";
-import fetchAllCoins from "@/helpers/getTrendingCoins";
+import getCurrentData from "@/services/getCurrentData";
+import fetchAllCoins from "@/services/getTrendingCoins";
 import { usePathname } from "next/navigation";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
@@ -28,7 +28,6 @@ const CurrencyDataProvider = ({ children }) => {
           setCoinData(data);
 
           const trendingData = await fetchAllCoins(currencyCode);
-          console.log(trendingData);
           setTrendingCoinsList(trendingData)
       }
       catch(err){
