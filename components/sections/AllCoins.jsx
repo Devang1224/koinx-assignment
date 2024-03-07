@@ -12,7 +12,7 @@ const AllCoins = () => {
   const { trendingCoinsList } = useCurrencyData();
 
   return (
-    <div className="p-4 bg-white flex flex-col gap-4 xl:w-[calc(100vw-20px)] xl:mt-12 xl:absolute xl:left-0 xl:p-[50px]">
+    <div className="p-4 bg-white flex flex-col gap-6 xl:w-[calc(100vw-20px)] xl:mt-12 xl:absolute xl:left-0 xl:p-[50px]">
       <div className="flex flex-col gap-1 sm:gap-4">
         <p className="text-[22px] font-semibold">You May Also Like</p>
 
@@ -43,7 +43,7 @@ const AllCoins = () => {
         </div>
       </div>
       <div className="flex flex-col gap-1 sm:gap-4">
-        <p className="text-[22px] font-semibold">You May Also Like</p>
+        <p className="text-[22px] font-semibold">Trending Coins</p>
 
         <div className="relative">
           <Swiper
