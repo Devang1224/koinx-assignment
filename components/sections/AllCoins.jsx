@@ -2,133 +2,72 @@ import { useCurrencyData } from "@/context/CurrencyDataProvider";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CoinsCard from "../ui/CoinsCard";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Navigation } from "swiper/modules";
 
 const AllCoins = () => {
   const { trendingCoinsList } = useCurrencyData();
-  const slider1 = React.useRef(null);
-  const slider2 = React.useRef(null);
-
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "none",
-          background: "red",
-        }}
-        onClick={onClick}
-      />
-    );
-  }
-
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "none", background: "green" }}
-        onClick={onClick}
-      />
-    );
-  }
-
-  const settings = {
-    className: "center",
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 5,
-    swipeToSlide: true,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1424,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          initialSlide: 0,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 670,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 470,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-    ],
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
 
   return (
     <div className="p-4 bg-white flex flex-col gap-4 xl:w-[100vw] xl:mt-12 xl:absolute xl:left-0 xl:p-[50px]">
       <div className="flex flex-col gap-1 sm:gap-4">
         <p className="text-[22px] font-semibold">You May Also Like</p>
 
-        <div className="slider-container relative">
-          <Slider ref={slider1} {...settings}>
-            {trendingCoinsList?.map((item, index) => {
-              return <CoinsCard item={item} key={index} />;
-            })}
-          </Slider>
-          <button
-            onClick={() => slider1?.current?.slickNext()}
-            className=" absolute bg-[white] w-[30px] h-[30px] border rounded-full flex items-center justify-center top-[35%] right-0"
+        <div className="relative">
+          <Swiper
+            slidesPerView={"auto"}
+            loop="true"
+            navigation={{
+              prevEl: ".swiper-button-prev1",
+              nextEl: ".swiper-button-next1",
+            }}
+            modules={[Navigation]}
+            className="mySwiper"
+            spaceBetween={10}
           >
-            <MdKeyboardArrowRight className="scale-150" />
+            {trendingCoinsList?.map((item, index) => (
+              <SwiperSlide key={index} style={{ width: "auto" }}>
+                <CoinsCard item={item} key={index} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <button className="swiper-button-next1 absolute right-[-10px] top-[40%] z-10 bg-white border rounded-full ">
+            <MdKeyboardArrowRight size={32} />
           </button>
-          <button
-            onClick={() => slider1?.current?.slickPrev()}
-            className=" absolute bg-[white] w-[30px] h-[30px] border rounded-full xl:flex items-center justify-center top-[35%] left-[-2%] hidden"
-          >
-            <MdKeyboardArrowLeft className="scale-150" />
+          <button className="swiper-button-prev1 absolute left-[-10px] top-[40%] z-10 bg-white border rounded-full hidden md:block">
+            <MdKeyboardArrowLeft size={32} />
           </button>
         </div>
       </div>
       <div className="flex flex-col gap-1 sm:gap-4">
         <p className="text-[22px] font-semibold">You May Also Like</p>
 
-        <div className="slider-container relative">
-          <Slider ref={slider2} {...settings}>
-            {trendingCoinsList?.map((item, index) => {
-              return <CoinsCard item={item} key={index} />;
-            })}
-          </Slider>
-          <button
-            onClick={() => slider2?.current?.slickNext()}
-            className=" absolute w-[30px] bg-[white] h-[30px] border rounded-full flex items-center justify-center top-[35%] right-0"
+        <div className="relative">
+          <Swiper
+            slidesPerView={"auto"}
+            loop="true"
+            navigation={{
+              prevEl: ".swiper-button-prev2",
+              nextEl: ".swiper-button-next2",
+            }}
+            modules={[Navigation]}
+            className="mySwiper"
+            spaceBetween={10}
           >
-            <MdKeyboardArrowRight className="scale-150" />
+            {trendingCoinsList?.map((item, index) => (
+              <SwiperSlide key={index} style={{ width: "auto" }}>
+                <CoinsCard item={item} key={index} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <button className="swiper-button-next2 absolute right-[-10px] top-[40%] z-10 bg-white border rounded-full ">
+            <MdKeyboardArrowRight size={32} />
           </button>
-          <button
-            onClick={() => slider2?.current?.slickPrev()}
-            className=" absolute w-[30px] bg-[white] h-[30px] border rounded-full xl:flex items-center justify-center top-[35%] left-[-2%] hidden "
-          >
-            <MdKeyboardArrowLeft className="scale-150" />
+          <button className="swiper-button-prev2 absolute left-[-10px] top-[40%] z-10 bg-white border rounded-full hidden md:block">
+            <MdKeyboardArrowLeft size={32} />
           </button>
         </div>
       </div>
