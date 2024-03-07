@@ -2,6 +2,7 @@ import axios from "axios";
 
 export default async function getCurrentData(coinName,currencyCode){
 
+  console.log(coinName);
 if(!coinName)return;
 
  try{
