@@ -28,7 +28,7 @@ const CoinsCard = ({ item }) => {
       </div>
       <div className="pt-2">
         <p className="text-[18px] font-medium">
-          {item?.price.length > 8 ? "$5.52" : item?.price}
+          {item?.price.length > 8 ? "$5.52" : item?.price.toFixed(5)}
         </p>
         <div className="w-[80%]">
           <Image
