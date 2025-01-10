@@ -1,9 +1,14 @@
+
+
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const CoinsCard = ({ item }) => {
+
+
   return (
-    <div className="border p-2 w-[200px] max-h-[158px] md:min-w-[250px] md:max-h-[158px] md:p-4 rounded-lg">
+    <div className="border p-2 w-[200px] max-h-[158px] md:min-w-[250px] md:max-h-[158px] md:p-4 rounded-lg" >
       <div className="flex items-center">
         <div className="w-[20px] h-[20px] rounded-full bg-slate-500 overflow-hidden md:w-[26px] md:h-[26px]">
           <Image
